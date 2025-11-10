@@ -1,0 +1,44 @@
+/*
+  ESTILIZAÇÃO DA SEÇÃO DE BANNER (FUNDO COM IMAGEM)
+*/
+
+.secao-banner {
+    background-image: url('../image/banner.png');
+    height: 30rem;
+    margin: 0rem 0 1rem 0;
+
+    /* Configuração da Imagem de Fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+
+    /* Centralização de Conteúdo (se houver) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Efeito de Overlay Escurecido (Para destacar o texto sobre o banner) */
+.secao-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Posiciona o Container do Conteúdo acima do Overlay */
+.secao-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade: Ajustes para Telas Menores */
+@media (max-width: 768px) {
+    .secao-banner {
+        min-height: 250px;
+        padding: 60px 20px;
+    }
+}

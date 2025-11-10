@@ -1,0 +1,54 @@
+body {
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* Se tiver elementos como header, nav, sections que mudam de cor */
+.navbar,
+.secao-banner,
+footer {
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* ======= Dark mode overrides =======
+   These rules improve contrast when the page has data-bs-theme="dark" (Bootstrap 5.3)
+   Fixes: .text-muted too escuro em fundo escuro, seções com bg-light ficam muito claras,
+   e garante cor legível para textos gerais. */
+
+[data-bs-theme="dark"] {
+    background-color: #0f1720; /* escuro neutro */
+    color: #e6edf3; /* texto claro padrão */
+}
+
+[data-bs-theme="dark"] .text-muted {
+    /* torna o texto 'muted' legível em fundo escuro */
+    color: rgba(230,237,243,0.72) !important;
+}
+
+/* Seções marcadas com bg-light devem escurecer no modo escuro para manter contraste */
+[data-bs-theme="dark"] .bg-light {
+    background-color: rgba(255,255,255,0.03) !important;
+}
+
+/* Garantir que elementos que usam cores secundárias/primárias mantenham contraste
+   (por exemplo títulos, ícones e cards) */
+[data-bs-theme="dark"] .titulo-destaque,
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .cartao-elevado {
+    color: inherit;
+}
+
+/* Depoimento: texto em itálico deve herdar cor para ficar legível */
+[data-bs-theme="dark"] .depoimento-texto {
+    color: inherit;
+}
+
+/* Corrige o cabeçalho principal na página Sobre: evita fundo branco quando o tema é dark */
+[data-bs-theme="dark"] #cabecalho-principal {
+    background-color: #0b1220; /* fundo escuro neutro */
+    color: #e6edf3; /* garante texto claro */
+}
+
+[data-bs-theme="dark"] #cabecalho-principal .lead,
+[data-bs-theme="dark"] #cabecalho-principal .titulo-destaque {
+    color: inherit !important;
+}

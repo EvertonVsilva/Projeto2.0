@@ -1,0 +1,121 @@
+  /* ESTILOS DO FORMULÁRIO DE CADASTRO
+  Cores:
+  - #0077b6 (Azul principal)
+  - #00b4d8 (Azul secundário/hover)
+  - #f4f7f6 (Fundo da página)
+  - #333333 (Texto principal)
+  - #555555 (Texto de labels/subtítulos) */
+
+  /* Estilos do Corpo da Página */
+  body {
+      background-color: #f4f7f6;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      color: #333333;
+      line-height: 1.6;
+  }
+
+  /* Estilização do Container Principal (Card) */
+  .container {
+      max-width: 800px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+
+  /* Estilização do Título principal (h2) */
+  h2 {
+      color: #0077b6;
+      font-weight: 700;
+      border-bottom: 2px solid #0077b6;
+      padding-bottom: 10px;
+      margin-bottom: 30px !important;
+  }
+
+  /* Estilização dos Subtítulos (h5 - Dados Pessoais, Contato, etc.) */
+  h5 {
+      color: #555555;
+      font-weight: 600;
+      padding-bottom: 5px;
+  }
+
+  /* Estilização das Labels dos Campos */
+  .form-label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #555555;
+  }
+
+  /* Estilização dos Campos e Selects */
+  .form-control,
+  .form-select {
+      border-radius: 5px;
+      border: 1px solid #d0d0d0;
+      padding: 10px 15px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* Efeito de Foco nos Campos */
+  .form-control:focus,
+  .form-select:focus {
+      border-color: #0077b6;
+      box-shadow: 0 0 0 0.25rem rgba(0, 119, 182, 0.25);
+  }
+
+  /* Ajuste de Espaçamento entre Grupos de Campos (Margem inferior) */
+  .row.g-3>div {
+      margin-bottom: 18px;
+  }
+
+  /* Estilização e Responsividade dos Botões de Ação */
+
+  /* Botão Principal (Cadastrar Usuário) */
+  .btn-primary {
+      background-color: #0077b6;
+      border-color: #0077b6;
+      font-weight: 600;
+      padding: 12px 15px;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s, transform 0.1s;
+  }
+
+  .btn-primary:hover {
+      background-color: #00b4d8;
+      border-color: #00b4d8;
+      transform: translateY(-1px);
+  }
+
+  .btn-primary:active {
+      background-color: #0077b6 !important;
+      border-color: #0077b6 !important;
+  }
+
+  /* Botão Secundário (Limpar Tela) */
+  .btn-secondary {
+      font-weight: 600;
+      padding: 12px 15px;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+      background-color: #6c757d;
+      border-color: #6c757d;
+  }
+
+  /* Regra para telas pequenas (Mobile): forçar largura total e margem entre eles */
+  @media (max-width: 575.98px) {
+
+      /* Altera o display do contêiner dos botões para empilhar */
+      .col-12.d-flex {
+          flex-direction: column;
+      }
+
+      /* Força os botões a ocuparem a largura total */
+      .col-12.d-flex button {
+          width: 100%;
+          margin-bottom: 10px;
+          /* Adiciona um espaço entre os botões empilhados */
+      }
+  }
