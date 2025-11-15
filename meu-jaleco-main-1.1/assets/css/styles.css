@@ -1,0 +1,207 @@
+/* Transição suave aplicada apenas quando o usuário alterna o tema */
+html.theme-transition,
+html.theme-transition body,
+html.theme-transition .navbar,
+html.theme-transition .secao-banner,
+html.theme-transition footer,
+html.theme-transition .card,
+html.theme-transition .modal-content,
+html.theme-transition .dropdown-menu,
+html.theme-transition .table {
+    transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
+}
+
+/* ======= Dark mode overrides =======
+   These rules improve contrast when the page has data-bs-theme="dark" (Bootstrap 5.3)
+   Fixes: .text-muted too escuro em fundo escuro, seções com bg-light ficam muito claras,
+   e garante cor legível para textos gerais. */
+
+[data-bs-theme="dark"] {
+    background-color: #0f1720 !important; /* escuro neutro */
+    color: #e6edf3; /* texto claro padrão */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #0f1720 !important;
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    /* torna o texto 'muted' legível em fundo escuro */
+    color: rgba(230,237,243,0.72) !important;
+}
+
+/* Seções marcadas com bg-light devem escurecer no modo escuro para manter contraste */
+[data-bs-theme="dark"] .bg-light {
+    background-color: rgba(255,255,255,0.03) !important;
+}
+
+/* Garantir que elementos que usam cores secundárias/primárias mantenham contraste
+   (por exemplo títulos, ícones e cards) */
+[data-bs-theme="dark"] .titulo-destaque,
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .cartao-elevado {
+    color: inherit;
+}
+
+/* Depoimento: texto em itálico deve herdar cor para ficar legível */
+[data-bs-theme="dark"] .depoimento-texto {
+    color: inherit;
+}
+
+/* Corrige o cabeçalho principal na página Sobre: evita fundo branco quando o tema é dark */
+[data-bs-theme="dark"] #cabecalho-principal {
+    background-color: #0b1220; /* fundo escuro neutro */
+    color: #e6edf3; /* garante texto claro */
+}
+
+[data-bs-theme="dark"] #cabecalho-principal .lead,
+[data-bs-theme="dark"] #cabecalho-principal .titulo-destaque {
+    color: inherit !important;
+}
+
+/* Estilos para páginas admin no modo escuro */
+[data-bs-theme="dark"] .card {
+    background-color: #1c2330;
+    border-color: #2d3748;
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: #2d3748;
+    border-bottom-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .table {
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+    color: #e6edf3;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+[data-bs-theme="dark"] .table-hover > tbody > tr:hover > * {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .nav-tabs {
+    border-bottom-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link {
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link:hover {
+    border-color: #3d4758 #3d4758 transparent;
+}
+
+[data-bs-theme="dark"] .nav-tabs .nav-link.active {
+    background-color: #0f1720;
+    border-color: #3d4758 #3d4758 #0f1720;
+    color: #e6edf3;
+}
+
+/* Estilos para dropdown no modo escuro */
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #1c2330;
+    border-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item:focus {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .dropdown-divider {
+    border-top-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .btn-outline-light {
+    color: #e6edf3;
+    border-color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .btn-outline-light:hover {
+    background-color: #e6edf3;
+    color: #0f1720;
+}
+
+/* Estilos para modal no modo escuro */
+[data-bs-theme="dark"] .modal-content {
+    background-color: #1c2330;
+    border-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .modal-header {
+    background-color: #2d3748;
+    border-bottom-color: #3d4758;
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .modal-body {
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+    border-top-color: #3d4758;
+}
+
+[data-bs-theme="dark"] .form-control {
+    background-color: #0f1720;
+    border-color: #3d4758;
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background-color: #0f1720;
+    border-color: #5a7fa8;
+    color: #e6edf3;
+    box-shadow: 0 0 0 0.25rem rgba(90, 127, 168, 0.25);
+}
+
+[data-bs-theme="dark"] .form-select {
+    background-color: #0f1720;
+    border-color: #3d4758;
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #0f1720;
+    border-color: #5a7fa8;
+    color: #e6edf3;
+    box-shadow: 0 0 0 0.25rem rgba(90, 127, 168, 0.25);
+}
+
+[data-bs-theme="dark"] .form-control::placeholder {
+    color: rgba(230, 237, 243, 0.5);
+}
+
+[data-bs-theme="dark"] .form-control:disabled,
+[data-bs-theme="dark"] .form-control[readonly] {
+    background-color: #1c2330;
+    color: rgba(230, 237, 243, 0.72);
+}
+
+[data-bs-theme="dark"] .container,
+[data-bs-theme="dark"] main {
+    background-color: transparent;
+}
+
+[data-bs-theme="dark"] .form-label {
+    color: #e6edf3;
+}
+
+[data-bs-theme="dark"] .form-text {
+    color: rgba(230, 237, 243, 0.72);
+}
+
+[data-bs-theme="dark"] .btn-close {
+    filter: invert(1);
+}
+

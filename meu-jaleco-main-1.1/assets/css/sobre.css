@@ -1,0 +1,57 @@
+/*
+  ESTILIZAÇÃO DE SEÇÕES E COMPONENTES DIVERSOS (Homepage/Página Sobre)
+*/
+
+/* Seção Sobre */
+.secao-sobre {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Estilo para Imagem de Certificado */
+.certificado-qualidade {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+    border: 5px solid #00800095;
+}
+
+/* Título de Destaque */
+.titulo-destaque {
+    color: #007bff;
+    /* Valor da Cor Principal */
+    font-weight: 700;
+}
+
+/* Estilização de Cartões */
+.cartao-elevado {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cartao-elevado:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilização de Ícone */
+.icone-principal {
+    font-size: 2.5rem;
+    color: #007bff;
+    /* Valor da Cor Principal */
+    margin-bottom: 1rem;
+}
+
+/* Cabeçalho Principal (Hero Section) */
+#cabecalho-principal {
+    background-color: #f8f9fa;
+    padding: 8rem 0;
+}
+
+/* Estilo para o Texto de Depoimento */
+.depoimento-texto {
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
