@@ -386,7 +386,7 @@ Todos os elementos com tema escuro profissional.
 ### Usuário Master (Acesso Total)
 ```
 Login: admin
-Senha: adminadm
+Senha: 12345678
 E-mail: admin@faculdade.com.br
 ```
 
@@ -473,3 +473,4 @@ Para dúvidas ou problemas:
 **Desenvolvido com ❤️ e ☕**
 
 *Última atualização: Novembro 2025*
+
