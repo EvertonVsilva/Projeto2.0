@@ -1,0 +1,21 @@
+/*
+  ESTILIZAÇÃO DA PÁGINA DE LOGIN
+*/
+
+/* Contêiner principal: Centraliza o card de login na tela */
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Ocupa a altura total da viewport */
+}
+
+/* Card ou Caixa do Formulário de Login */
+.cartao-login {
+    max-width: 400px;
+    /* Limite de largura para o card */
+    width: 100%;
+    /* Garante responsividade */
+    padding: 20px;
+}
